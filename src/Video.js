@@ -1,14 +1,12 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './Video.css';
-// import samplevideo from './sample-mp4-file.mp4';
 import VideoPlayer from 'react-player';
 import VideoFooter from './VideoFooter';
 import VideoSidebar from './VideoSidebar';
-
+import VideoTopbar from './VideoTopbar';
 
 function Video({ url, light, like, message, share, channel, description, song }) {
     const [valplay, setPlay] = useState(false);
-    // const videoRef = useRef(null);
 
     const handlePress = () => {
         if (valplay) {
@@ -29,12 +27,9 @@ function Video({ url, light, like, message, share, channel, description, song })
                     width="100%"
                     light={light}
                     url={url}
-                    // url={[{ src: './sample-mp4-file.MP4', type: 'video/mp4' }]}
                     // light={true}
-                    // url={samplevideo}
-                    // ref={videoRef}
                     controls />
-
+                <VideoTopbar />
                 <VideoFooter
                     channel={channel}
                     description={description}

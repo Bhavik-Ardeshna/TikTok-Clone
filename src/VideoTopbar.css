@@ -1,0 +1,14 @@
+.videoTopbar__head{
+    position: relative;
+    color: white;
+    top: -768px;
+    margin-left: 40px;
+    display: flex;
+    
+}
+
+.videoTopbar__head > h3{
+    color: white;
+    font-size: 2.1em;
+    font-family: 'Poiret One', cursive;
+}
